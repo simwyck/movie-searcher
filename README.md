@@ -1,6 +1,6 @@
-# Movie Search
+# Movie Searcher
 
-Heroku:
+Heroku: https://j29-movie-swy.herokuapp.com/
 
 ---
 
