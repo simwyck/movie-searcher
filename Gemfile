@@ -12,6 +12,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'themoviedb'
 
 group :development, :test do
   gem 'sqlite3'

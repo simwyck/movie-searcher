@@ -1,19 +1,5 @@
 <h1>Search Film</h1>
 
-<%= form_for @film do |f| %>
-
-  <div class="form-group">
-
-    <label>Film Title</label>
-
-    <%= f.text_field :query, class: 'form-control' %>
-
-  </div>
-
-  <div class="form-group">
-
-    <button type="submit">Search</button>
-
-  </div>
-
+<%= form_tag("/search", :method => "get") do %>
+  <%= text_field_tag(@film_title, nil) %>
 <% end %>

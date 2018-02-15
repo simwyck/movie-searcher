@@ -3,18 +3,8 @@ class FilmsController < ApplicationController
   def index
   end
 
-  def new
-  end
-
-  def create
-    @film = Film.create(film_params)
-    @film.save
-    SendFilm.new(@film.film_text).perform
-    redirect_to @film
-  end
-
   def search
-    @film = Tmdb::Movie.find(params[:query])
+    @film = Tmdb::Movie.find(params[@film_title])
   end
 
   def show
@@ -23,12 +13,6 @@ class FilmsController < ApplicationController
   	@cast = Tmdb::Movie.casts(params[:id])
   	@trailers = Tmdb::Movie.trailers(params[:id])
   	@similar_movies = Tmdb::Movie.similar_movies(params[:id])
-  end
-
-  private
-
-  def film_params
-    params.require(:film).permit(:film_title)
   end
 
 end

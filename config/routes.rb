@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'searches/index'
+  get '/search', to:'films#search'
 
   get 'films/index'
 
